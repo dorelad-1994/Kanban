@@ -1,11 +1,7 @@
 # KanbanProject
 Kanban is a project management methodology that allows for organizing and
-prioritizing projects and their tasks, using boards, lists, and cards. With the right
-Kanban board software, one can focus on priorities, keep the team in the loop about
-what’s current and what’s coming up, and control a steady flow of work, especially in
-output-heavy environments like production, agencies, support, and maintenance.
-This is a tool that supports agile development and helps to visualize and manage the
-workflow.
+prioritizing projects and their tasks, using boards, lists, and cards.
+Kanban is a popular framework used to implement agile and DevOps software development. It requires real-time communication of capacity and full transparency of work. Work items are represented visually on a kanban board, allowing team members to see the state of every piece of work at any time.
 
 
 
