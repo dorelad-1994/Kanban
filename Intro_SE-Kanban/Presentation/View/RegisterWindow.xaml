@@ -1,0 +1,34 @@
+﻿<Window x:Class="Presentation.View.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation.View"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="416" Margin="1,1,0,0" VerticalAlignment="Top" Width="791">
+            <TextBlock Name="datetimeLabel" TextWrapping="Wrap" Text="" Height="29" Margin="20,0,675,0" Foreground="DarkBlue"/>
+            <Label Content="Registration" Height="53" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Century Schoolbook" FontWeight="Bold" FontSize="36"/>
+            <Grid Height="256" Margin="121,0,133,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="155"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Email : " HorizontalAlignment="Left" Margin="29,24,0,0" VerticalAlignment="Top" Width="79" HorizontalContentAlignment="Center" FontFamily="Century Schoolbook" FontWeight="Bold" Height="24" FontSize="14"/>
+                <Label Content="Password : " HorizontalAlignment="Left" Margin="29,70,0,0" VerticalAlignment="Top" Width="79" HorizontalContentAlignment="Center" FontFamily="Century Schoolbook" FontWeight="Bold" Height="24" FontSize="14"/>
+                <Label Content="Nickname : " HorizontalAlignment="Left" Margin="29,118,0,0" VerticalAlignment="Top" Width="100" HorizontalContentAlignment="Center" FontFamily="Century Schoolbook" FontWeight="Bold" Height="24" FontSize="14"/>
+                <Label Content="Email Host : " HorizontalAlignment="Left" Margin="29,167,0,0" VerticalAlignment="Top" Width="109" HorizontalContentAlignment="Center" FontFamily="Century Schoolbook" FontWeight="Bold" Height="24" FontSize="14"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="21,30,0,0" TextWrapping="Wrap" Text="{Binding Path=Email,Mode=OneWayToSource,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="191" FontFamily="Century Gothic" Name="EmailTB"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="21,76,0,0" TextWrapping="Wrap" Text="{Binding Path=Password,Mode=OneWayToSource,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="191" FontFamily="Century Gothic" Name="PasswordTB"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="21,122,0,0" TextWrapping="Wrap" Text="{Binding Path=NickName,Mode=OneWayToSource,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="191" FontFamily="Century Gothic" Name="NickNameTB"/>
+                <CheckBox Content="Join Existing Board" Grid.Column="1" HorizontalAlignment="Left" Margin="232,173,0,0" VerticalAlignment="Top" Name="JoinB"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="22,167,0,0" TextWrapping="Wrap" Text="{Binding Path=EmailHost, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="191" FontFamily="Century Gothic" Name="EmailHostTB" IsEnabled="{Binding IsChecked, ElementName=JoinB}"/>
+                <Button Content="Register" Click="Register_Click" Grid.Column="1" HorizontalAlignment="Left" Margin="57,225,0,0" VerticalAlignment="Top" Width="111" Height="29" Background="#FF818181" FontSize="16" FontWeight="Bold" FontFamily="Cambria" IsDefault="True"/>
+            </Grid>
+            <Label Content="{Binding Path=ErrorOcured,Mode=OneWay}" Foreground="Black" FontSize="10" FontWeight="Bold" FontFamily="Century Schoolbook" Height="20" Margin="0,0,299,0" Name="ErrorOcuredTB" />
+            <Label Content="{Binding Path=ErrorMessage, Mode=OneWay}" Height="62" Foreground="Red" FontFamily="Century Schoolbook" x:Name="ErrorMessageTB" Margin="0,0,308,0"/>
+        </StackPanel>
+        <Button Content="🢠" Click="Return_Click" HorizontalContentAlignment="Stretch" UseLayoutRounding="True" Margin="727,367,17,9" VerticalContentAlignment="Stretch" BorderBrush="{x:Null}" Height="43" FontSize="36" Padding="1,-8,1,1" Background="{x:Null}" Foreground="Black" />
+    </Grid>
+</Window>
