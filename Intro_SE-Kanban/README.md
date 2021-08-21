@@ -10,7 +10,7 @@ workflow.
 
 
 ## How to run the program :
-**Step 1** : download from the release "bin.zip"
+**Step 1** : download from the release "Kanban.zip"
 
 **Step 2** : unzip and run the "Presentation.exe"
 
